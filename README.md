@@ -1,1 +1,1 @@
-## React Pixabay App (Simple image seeker)
+### React Pixabay App (Simple image seeker)
