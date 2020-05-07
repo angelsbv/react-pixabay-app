@@ -1,1 +1,1 @@
-React JS <3
+## React Pixabay App (Simple image seeker)
