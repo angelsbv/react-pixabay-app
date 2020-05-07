@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import SearchImage from './components/SearchImage';
 import Image from './components/Image';
-import './App.css';
+// eslint-disable-next-line
+import appCSS from './styles/App.module.css';
+// eslint-disable-next-line
+import materialize from './styles/Materialize.min.module.css';
 
 export default class App extends Component {
 
@@ -26,12 +29,15 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div styleName='materialize.container'>
         <SearchImage getSearchQuery={this.getSearchQuery} />
-        <div className="grid-container">
+        <div styleName='appCSS.grid-container'>
           {
             this.state.images.map(image => (
-              <Image key={image.id} image={image} />
+              <Image 
+                key={image.id} 
+                image={image} 
+              />
             ))
           }
         </div>
@@ -39,3 +45,4 @@ export default class App extends Component {
     )
   }
 }
+

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/Materialize.min.module.css'
 
 export default class SearchImage extends Component {
 
@@ -18,21 +19,34 @@ export default class SearchImage extends Component {
     render() {
         return (
             <nav>
-                <div className="nav-wrapper">
+                <div styleName="nav-wrapper">
                     <form onSubmit={this.handleFormSubmit}>
-                        <div className="input-field blue">
-                            <input 
-                                id="search" 
+                        <div styleName="input-field grey darken-1">
+                            <input
+                                id="search"
                                 type="search"
                                 name="search"
-                                placeholder="Enter a keyword to search images"
+                                placeholder="Introduzca una palabra clave para b&uacute;scar imagenes"
                                 onChange={this.handleSearch}
                                 value={this.state.search}
                             />
-                            <label className="label-icon" htmlFor="search">
-                                <i className="material-icons">search</i>
+                            <label 
+                                styleName="label-icon" 
+                                htmlFor="search"
+                            >
+                                <i 
+                                    className="material-icons"
+                                    styleName="material-icons"
+                                >
+                                search
+                                </i>
                             </label>
-                            <i className="material-icons">close</i>
+                            <i 
+                                className="material-icons"
+                                styleName="material-icons"
+                            >
+                                close
+                            </i>
                         </div>
                     </form>
                 </div>
